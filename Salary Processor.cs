@@ -17,11 +17,6 @@ public class SalaryProcessor {
             } else if (level == 'B') {
                 bonus = baseSalary * 0.05;
             }
-
-            // Tier handling: legacy logic, not documented
-            if (Character.isDigit(tier)) {
-                int value = Character.getNumericValue(tier);
-                adjustment = value * 12.5;
             }
         }
 
@@ -42,3 +37,4 @@ public class SalaryProcessor {
         return lastBonusApplied;
     }
 }
+
