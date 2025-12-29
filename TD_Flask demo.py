@@ -25,13 +25,6 @@ def get_user(id):
     else:
         return jsonify({'message': 'User not found'}), 404
 
-# Route to store session in Redis
-@app.route('/set_session', methods=['POST'])
-def set_session():
-    user_id = request.json.get('user_id')
-    redis_client.set(f'user_session_{user_id}', 'active')
-    return jsonify({'message': f'Session for user {user_id} set successfully'}), 200
-
 # Route to check session status from Redis
 @app.route('/check_session/<int:user_id>', methods=['GET'])
 def check_session(user_id):
@@ -44,3 +37,4 @@ def check_session(user_id):
 if __name__ == '__main__':
     db.create_all()  # Create all tables
     app.run(debug=True)
+
