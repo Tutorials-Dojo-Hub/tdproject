@@ -1,0 +1,15 @@
+name: Close linked issue when PR merged
+on:
+  pull_request:
+    types: [closed]
+
+jobs:
+  close-linked-issue:
+    if: github.event.pull_request.merged == true
+    runs-on: ubuntu-latest
+    steps:
+      - name: Close referenced issues
+        uses: peter-evans/close-issue@v2
+        with:
+          issue-number: ${{ github.event.pull_request.body }} # or parse numbers from body with a small script
+          github-token: ${{ secrets.GITHUB_TOKEN }}
