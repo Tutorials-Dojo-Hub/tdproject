@@ -1,0 +1,58 @@
+title: "Project Improvement Idea"
+labels:
+  - enhancement
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to contribute ideas!
+        Please provide as much detail as possible so the community can discuss and evaluate the proposal effectively.
+
+  - type: input
+    id: summary
+    attributes:
+      label: Short summary
+      description: Provide a brief, clear summary of the idea.
+      placeholder: "Add support for..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: motivation
+    attributes:
+      label: Motivation
+      description: Explain the problem this idea solves or the improvement it brings.
+      placeholder: |
+        Describe the current limitation or opportunity for improvement.
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposed-solution
+    attributes:
+      label: Proposed solution
+      description: Describe the suggested change or enhancement.
+      placeholder: |
+        Outline how this idea could be implemented.
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+      description: List any alternative approaches that were considered.
+      placeholder: |
+        Describe other possible solutions and why they were not chosen.
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: confirmation
+    attributes:
+      label: Confirmation
+      options:
+        - label: This idea is relevant to the project’s scope
+          required: true
+        - label: A similar idea has not already been discussed
+          required: true
