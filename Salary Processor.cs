@@ -35,6 +35,9 @@ public class SalaryProcessor {
 
     public static double getLastBonusApplied() {
         return lastBonusApplied;
+
+        //Comment
     }
 }
+
 
